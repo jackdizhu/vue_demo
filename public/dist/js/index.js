@@ -91,7 +91,7 @@ var _demo2 = _interopRequireDefault(_demo);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 new _vue2.default({
-    el: 'body',
+    el: '#app',
     components: { demo01: _demo2.default }
 });
 
