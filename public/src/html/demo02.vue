@@ -1,6 +1,6 @@
 <template>
-    <div id="demo01">
-        <div v-for="n in 10">div01</div>
+    <div id="demo02">
+        <div v-for="n in 10">div02</div>
     </div>
 </template>
 
@@ -15,7 +15,7 @@
 </script>
 
 <style>
-    #demo01{
+    #demo02{
         background: #eee;
     }
 </style>

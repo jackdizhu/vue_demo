@@ -1,5 +1,5 @@
 
-react_demo
+react_demo ^2.3.4
 
 npm run dev
 
