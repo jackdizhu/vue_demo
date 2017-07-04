@@ -7,3 +7,4 @@ npm run dev
     (found in <Root>)
 如果我们想使用template，我们不能直接在客户端使用npm install之后的vue
 
+VueRouter 没有渲染问题  需要调用 Vue.use(VueRouter); 方法
