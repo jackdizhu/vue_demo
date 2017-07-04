@@ -1,5 +1,5 @@
-import Vue from './js/vue.js';
-import VueRouter from './js/vue-router.js';
+import Vue from './js/vue.min.js';
+import VueRouter from './js/vue-router.min.js';
 
 import App from './html/app.vue';
 
