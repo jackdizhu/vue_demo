@@ -92,7 +92,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 new _vue2.default({
     el: '#app',
-    components: { demo01: _demo2.default }
+    components: { Demo01: _demo2.default }
 });
 
 /***/ }),
@@ -9093,7 +9093,7 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "\nhtml{\n    background: red;\n}\n", ""]);
+exports.push([module.i, "\n#demo01{\n    background: #eee;\n}\n", ""]);
 
 // exports
 
@@ -9517,6 +9517,9 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
 exports.default = {
     data: function data() {
@@ -9532,7 +9535,13 @@ exports.default = {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c("div")
+  return _c('div', {
+    attrs: {
+      "id": "demo01"
+    }
+  }, _vm._l((10), function(n) {
+    return _c('div', [_vm._v("div")])
+  }))
 }
 var staticRenderFns = []
 render._withStripped = true
