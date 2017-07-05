@@ -6,9 +6,6 @@ import App from './html/app.vue';
 import Home from './html/demo01.vue';
 import Foo from './html/demo02.vue';
 
-import './js/jquery.min.js';
-
-console.log($);
 
 Vue.use(VueRouter);
 
