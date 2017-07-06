@@ -20,7 +20,9 @@ var gulp = require('gulp'),
 
   gulp_webpack = require('gulp-webpack'),
   webpack= require('webpack'),
-  webpack_config = require('./webpack.config.js');
+  webpack_config = require('./webpack.config.js'),
+
+  devHtml = require('gulp-devHtml');
 
   var basePath = 'public/';
 
@@ -74,6 +76,9 @@ var gulp = require('gulp'),
   gulp.task('buildjs',() => {
     gulp.src(basePath + 'src/index.js')
       .pipe(gulp_webpack(webpack_config,webpack))
+      .pipe(devHtml({
+        files: ['./public/html/demo04.html']
+      }))
       .pipe(gulp.dest(basePath + 'dist/js/'))
       // .pipe(livereload());
   });

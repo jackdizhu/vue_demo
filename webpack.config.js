@@ -9,8 +9,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './'),
-        filename: '[name].js',
-        library: '[name].js',
+        filename: '[name].[chunkhash:8].js',
+        library: '[name].[chunkhash:8].js',
         libraryTarget: 'umd',
     },
     module: {
@@ -20,6 +20,14 @@ module.exports = {
                 use: [
                     {
                         loader: 'babel-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader',
                     },
                 ],
             },

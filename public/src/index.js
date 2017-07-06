@@ -1,30 +1,19 @@
+// import Vue from './js/vue.min.js';
+
+// import Demo03 from './html/demo03.vue';
+
+// // import './js/jquery.min.js';
+
+// var app = new Vue({
+//     el: '#app',
+//     components: {Demo03}
+//   });
+
+
 import Vue from './js/vue.min.js';
-import VueRouter from './js/vue-router.min.js';
-
-import App from './html/app.vue';
-
-import Home from './html/demo01.vue';
-import Foo from './html/demo02.vue';
-
-import './js/jquery.min.js';
-
-console.log($);
-
-Vue.use(VueRouter);
-
-const routes = [
-    { path: '/', component: Home },
-    { path: '/foo', component: Foo },
-]
-
-const router = new VueRouter({
-    mode: 'history',
-    base: __dirname, //这个很重要
-    routes
-})
+import Demo01 from './html/demo01.vue';
 
 new Vue({
-    router,
     el: '#app',
-    render: h => h(App)
-});
+    components: {Demo01}
+})
