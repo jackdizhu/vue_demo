@@ -1,7 +1,7 @@
 
 react_demo ^2.3.4
 
-npm run dev
+gulp(^3.9.0) + webpack(^3.0)
 
 [Vue warn]: You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.
     (found in <Root>)
