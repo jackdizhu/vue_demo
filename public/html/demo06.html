@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="renderer" content="webkit" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Expires" content="-1"/>
+
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>test</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+
+</head>
+<body>
+    <div id="app">
+    <h1>Hello App!</h1>
+</div>
+<div id="app2">
+    <p @click=_appClick>
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/home">Go to Home</router-link>
+    </p>
+    <router-view :title=title></router-view>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/2.7.0/vue-router.min.js"></script>
+<script>
+    var data = {
+        title: ' 空 '
+    };
+    const Foo = { template: '<div>Foo Foo</div>' }
+    // const Home = { template: '<div>bar</div>' }
+    var Home = Vue.extend({
+        props: ['title'],
+        template: '<p>121212{{title}}<span v-for="i in title.length">_span_</span></p>',
+        // data: function () {
+        //     return data;
+        // }
+    })
+
+    const routes = [
+        { path: '/foo', component: Foo },
+        { path: '/home', component: Home }
+    ]
+
+    Vue.use(VueRouter);
+
+    const router = new VueRouter({
+        routes
+    })
+
+    const app = new Vue({
+        router: router,
+        el: '#app2',
+        data: function () {
+            return {
+                title: 'tttt'
+            };
+        },
+        methods: {
+            _appClick: function () {
+                // app.title = app.title + ' + '
+                this.$data.title = this.$data.title + ' + '
+                console.log(this.$data);
+            }
+        }
+    })
+
+    console.log(app);
+</script>
+</body>
+</html>

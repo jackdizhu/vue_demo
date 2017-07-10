@@ -19,14 +19,14 @@
 
 </head>
 <body>
-    <div id="app">
-        <List ></List>
+    <div id="app" @click=_appClick>
+        <List :name="title"></List>
     </div>
 
   <script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
 
     <script type="text/template" id="tpl">
-        <p>我要在这里放很多html {{title}}</p>
+        <p>{{name}}我要在这里放很多html {{title}}</p>
     </script>
 
     <script type="text/javascript">
@@ -39,22 +39,32 @@
     </script>
 
     <script>
-        Vue.component('List',{
+        var List = Vue.extend({
             template: '#tpl',
+            props: ['name'],
             data: function(){
                 return {
                     title: '__title'
                 };
             }
-        });
+        })
+
+        Vue.component('List',List);
+
         new Vue({
             el: '#app',
-            // components: {List},
-            components: 'List',
+            // components: 'List',
+            components: {List: List},
             data: function () {
                 return {
                     title: 'title__'
                 };
+            },
+            methods: {
+                _appClick: function () {
+                    console.log(this);
+                    this.$data.title = this.$data.title + ' + '
+                }
             }
         });
     </script>
