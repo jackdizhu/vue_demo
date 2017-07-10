@@ -1,5 +1,5 @@
 
-react_demo ^2.3.4
+vue_demo ^2.3.4
 
 gulp(^3.9.0) + webpack(^3.0)
 
@@ -8,3 +8,5 @@ gulp(^3.9.0) + webpack(^3.0)
 如果我们想使用template，我们不能直接在客户端使用npm install之后的vue
 
 VueRouter 没有渲染问题  需要调用 Vue.use(VueRouter); 方法
+
+更改启动方式 开发环境 npm run dev  正式环境 npm run env

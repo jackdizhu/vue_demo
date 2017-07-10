@@ -1,0 +1,1 @@
+{"version":3,"sources":["demo04.less"],"names":[],"mappings":"AAAA,QACI,WAAA,4CAAgB,OAAA,OAAA","file":"demo04.css","sourcesContent":["#demo04{\n    background: url('https://www.baidu.com/img/bd_logo1.png') center center no-repeat;\n}\n"]}
