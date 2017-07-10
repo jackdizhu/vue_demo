@@ -26,6 +26,7 @@
     <p @click=_appClick>
         <router-link to="/foo">Go to Foo</router-link>
         <router-link to="/home">Go to Home</router-link>
+        <router-link to="/orderList">Go to orderList</router-link>
     </p>
     <router-view :title=title></router-view>
 </div>
@@ -45,10 +46,18 @@
         //     return data;
         // }
     })
+    var OrderList = Vue.extend({
+        props: ['title'],
+        template: `<p>121212{{title}}<span v-for="i in title.length">_span_</span></p>`,
+        // data: function () {
+        //     return data;
+        // }
+    })
 
     const routes = [
         { path: '/foo', component: Foo },
-        { path: '/home', component: Home }
+        { path: '/home', component: Home },
+        { path: '/orderList', component: OrderList }
     ]
 
     Vue.use(VueRouter);
