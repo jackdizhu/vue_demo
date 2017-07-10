@@ -20,8 +20,29 @@
 </head>
 <body>
     <div id="app">
-        <Demo01></Demo01>
+        <List></List>
     </div>
-  <script type="text/javascript" src="../dist/js/index.e5ff9eaf.js"></script>
+
+  <script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+
+    <script type="text/template" id="tpl">
+        <p>我要在这里放很多html</p>
+    </script>
+
+    <script type="text/javascript">
+        // var List = Vue.extend({
+        //     template: '<p>我要在这里放很多html</p>'
+        // })
+        var List = Vue.extend({
+            template: '#tpl'
+        })
+    </script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            components: {List}
+        })
+    </script>
 </body>
 </html>
