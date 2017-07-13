@@ -1,8 +1,8 @@
 import Vue from './js/vue.min.js';
-import Demo04 from './html/demo04.vue';
+import Demo05 from './html/demo05.vue';
 
 
 new Vue({
     el: '#app',
-    components: {Demo04}
+    components: {Demo05}
 })
