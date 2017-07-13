@@ -12,8 +12,12 @@ module.exports = {
     devtool: 'eval-source-map',
     output: {
         path: path.resolve(__dirname, './'),
-        filename: '[name].js',
-        library: '[name].js',
+        // 正常配置
+        // publicPath: 'dist/',
+        // php 服务器配置
+        publicPath: '../dist/',
+        filename: 'js/[name].js',
+        library: 'js/[name].js',
         libraryTarget: 'umd',
     },
     module: {
@@ -31,6 +35,14 @@ module.exports = {
                 use: [
                     {
                         loader: 'style-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.(png|jpg)$/,
+                use: [
+                    {
+                        loader: 'url-loader?limit=8192&name=img/[name].[hash:8].[ext]',
                     },
                 ],
             },
