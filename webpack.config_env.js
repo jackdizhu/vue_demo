@@ -44,6 +44,10 @@ module.exports = {
                     },
                 ],
             },
+            {
+    　　　　　　test: /\.html$/,
+    　　　　　　loader: 'html-withimg-loader'
+    　　　　},
             // 使用vue-loader 加载 .vue 结尾的文件
             {
              test: /\.vue$/,

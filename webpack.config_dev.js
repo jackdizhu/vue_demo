@@ -47,7 +47,6 @@ module.exports = {
                 ],
             },
             {
-    // 　　　　　　test: /\.html$/,
     　　　　　　test: /\.html$/,
     　　　　　　loader: 'html-withimg-loader'
     　　　　},
