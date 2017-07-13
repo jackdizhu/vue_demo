@@ -28,6 +28,7 @@ var gulp = require('gulp'),
 
   // less 编译
   gulp.task('less',(event) => {
+      console.log('less 编译');
       gulp.src(basePath + 'src/less/*.less')
         .pipe(plumber({errorHandler:notify.onError('Error:<%=error.message%>')}))
         .pipe(sourcemaps.init())

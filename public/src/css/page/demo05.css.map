@@ -1,0 +1,1 @@
+{"version":3,"sources":["demo05.less"],"names":[],"mappings":"AAAA,QACI,WAAA,4BAAA,OAAA,IAAA,UACA,gBAAA,KAFJ,uBAIQ,QAAA,MACA,MAAA","file":"demo05.css","sourcesContent":["#demo04{\n    background: url(../../img/index_bg.jpg) center top no-repeat;\n    background-size: 100%;\n    img:last-child{\n        display: block;\n        width: 100%;\n    }\n}\n"]}
