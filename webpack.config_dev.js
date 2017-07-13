@@ -34,13 +34,13 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     {
-                        // loader: 'style-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
-                        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
+                        // loader: 'style-loader!css-loader?importLoaders=1&modules&localIdentName=[name]__[local]___[hash:base64:5]',
+                        loader: 'style-loader!css-loader',
                     },
                 ],
             },
             {
-                test: /\.(jpe?g|png|gif)$/,
+                test: /\.(jpe?g|png|gif|svg)$/,
                 use: [
                     {
                         loader: 'url-loader?limit=8192&name=img/[name].[hash:8].[ext]',
