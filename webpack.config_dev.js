@@ -34,12 +34,13 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: 'style-loader',
+                        // loader: 'style-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
+                        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]',
                     },
                 ],
             },
             {
-                test: /\.(png|jpg)$/,
+                test: /\.(jpe?g|png|gif)$/,
                 use: [
                     {
                         loader: 'url-loader?limit=8192&name=img/[name].[hash:8].[ext]',
