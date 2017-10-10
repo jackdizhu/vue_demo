@@ -22,10 +22,11 @@
     import { USER_SIGNOUT } from 'store/user.js'
     export default {
         methods: {
+            // mapAction 函数 把我们的 action 直接映射到store 里面的action中
             ...mapActions([USER_SIGNOUT]),
             submit() {
-                this.USER_SIGNOUT()
-				this.$router.replace({ path: '/login' })
+                this[USER_SIGNOUT]()
+				        this.$router.replace({ path: '/login' })
             }
         }
     }
