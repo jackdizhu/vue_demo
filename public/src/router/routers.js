@@ -17,10 +17,6 @@ export default [
                 component: resolve => require(['../pages/signout/index.vue'], resolve)
             },
             {
-                path: '/home', //个人主页
-                component: resolve => require(['../pages/home/index.vue'], resolve)
-            },
-            {
                 path: '/', //首页
                 meta: { auth: false },
                 component: resolve => require(['../pages/index/index.vue'], resolve)

@@ -13,14 +13,17 @@
 <template>
 	<div>
 		<v-header title="首页">
-			<router-link slot="right" v-if="user.id" to="/home">{{user.name}}</router-link>
+			<router-link slot="right" v-if="user.id" to="/signout">退出</router-link>
+			<router-link slot="right" v-else to="/login">未登录,立即登录</router-link>
 		</v-header>
 		<div class="login-msg" v-if="!user.id">
-			<router-link to="/login">你还未登录，请先登录</router-link>
+			<div>
+					index 首页
+			</div>
 		</div>
 		<div class="msg" v-if="user.id">
 			<img width="50" :src="logo" alt=""> <br>
-			哈哈，恭喜你已经入坑Vue2
+			Vue2 欢迎: {{user.name}}
 		</div>
 	</div>
 </template>

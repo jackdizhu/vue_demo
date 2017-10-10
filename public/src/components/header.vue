@@ -2,16 +2,16 @@
 	.header {
 		position: relative;
 		line-height: 38px;
-		color: #fff;
+		color: #666;
 		text-align: center;
-		background: #222;
+		background: #eee;
 		.item {
 			position: absolute;
 			top: 0;
 			bottom: 0;
 			z-index: 1;
 			a {
-				color: #fff;
+				color: #333;
 			}
 		}
 		.left {

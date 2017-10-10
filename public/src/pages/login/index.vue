@@ -23,8 +23,8 @@
 		</v-header>
 		<form class="login" v-on:submit.prevent="submit">
 			<div class="line">
-				<div v-show="btn && !form.id">id不能为空</div>
-				<input type="number" placeholder="输入你的id" v-model="form.id">
+				<div v-show="btn && !form.id">账号不能为空</div>
+				<input type="number" placeholder="输入你的账号" v-model="form.id">
 			</div>
 			<div class="line">
 				<div v-show="btn && !form.name">用户名不能为空</div>
@@ -54,7 +54,7 @@
 				this.btn = true
 				if(!this.form.id || !this.form.name) return
 				this.USER_SIGNIN(this.form)
-				this.$router.replace({ path: '/home' })
+				this.$router.replace({ path: '/' })
 			}
 		}
     }
