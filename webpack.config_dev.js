@@ -63,6 +63,10 @@ module.exports = {
             vue: path.resolve(__dirname,_path + 'dist/js/vue/vue.js'), //webpack打包时，需要设置别名
             store: '../../store' //设置别名
         }
-    }
+    },
+    // 配置外部模块
+    // externals: {
+    //     vue: "window.Vue"
+    // }
     // plugins: [new webpack.optimize.UglifyJsPlugin(), new webpack.optimize.ModuleConcatenationPlugin()],
 }
