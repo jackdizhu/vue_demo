@@ -49,6 +49,7 @@
 			}
 		},
 		methods: {
+						// mapAction 函数 把我们的 action 直接映射到store 里面的action中
             ...mapActions([USER_SIGNIN]),
 			submit() {
 				this.btn = true

@@ -28,14 +28,18 @@
 	</div>
 </template>
 <script>
-    import { mapState } from 'vuex'
+
+  import { mapState } from 'vuex'
+
 	import logo from './logo.png'
-    export default {
+
+  export default {
 		data() {
 			return {
 				logo
 			}
 		},
-        computed: mapState({ user: state => state.user }),
-    }
+    computed: mapState({ user: state => state.user }),
+  }
+
 </script>
