@@ -16,14 +16,15 @@ module.exports = {
         // publicPath: 'dist/',
         // php 服务器配置
         publicPath: '../dist/',
-        filename: 'js/[name].js?[chunkhash:8]',
+        filename: 'js/[name].js?[chunkhash:8]', // 每小块 单独的 hash 值
+        // filename: 'js/[name].js?' + new Date().getTime(), // 时间戳 版本号
         library: 'js/[name].js',
         libraryTarget: 'umd',
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js(x)?$/,
                 use: [
                     {
                         loader: 'babel-loader',
@@ -74,7 +75,7 @@ module.exports = {
             filename: '../html/demo08.html', //生成的html存放路径，相对于 path
             template: path.resolve(__dirname, _path + 'src/html/demo08.html'), //html模板路径
         }),
-        new webpack.optimize.UglifyJsPlugin(),
-        new webpack.optimize.ModuleConcatenationPlugin()
+        // new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.ModuleConcatenationPlugin()
     ]
 }
