@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/" + chunkId + ".js?" + {"0":"5e43d58c","1":"c01fefd7","2":"0c18adaf"}[chunkId] + "";
+/******/ 		script.src = __webpack_require__.p + "js/" + chunkId + ".js?v=" + {"0":"65c799b2","1":"c01fefd7","2":"0c18adaf"}[chunkId] + "";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {

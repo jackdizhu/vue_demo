@@ -91,8 +91,25 @@ var gulp = require('gulp'),
       // .pipe(livereload());
   });
 
+  //CSS生成文件hash编码并生成 rev-manifest.json文件名对照映射
+  gulp.task('revCss', () => {
+      console.log('revCss');
+      return gulp.src(basePath + 'src/css/*.css')
+          .pipe(rev())
+          .pipe(rev.manifest())
+          .pipe(gulp.dest(basePath + 'rev/css'));
+  });
+  // 根据 rev-manifest.json文件名对照 替换文件名称 版本号
+  gulp.task('revHtml',['revCss'], () => {
+    return gulp.src([basePath + 'html/demo08.html',basePath + 'rev/**/*.json'])
+      .pipe(revCollector())
+      .pipe(gulp.dest(basePath + 'dist/'))
+  });
+  gulp.task('rev',['revCss','revHtml']);
+
   //定义默认任务
   gulp.task('default',['watchBuild','watchLess']);
 //   gulp.task('default',['watchLess']);
   gulp.run('default');
+  gulp.run('rev');
   // express.run(['./app/bin/www']);

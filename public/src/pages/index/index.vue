@@ -9,10 +9,14 @@
 		font-size: 20px;
 		color: red;
 	}
+	.indexBtn{
+		background: url("./logo.png") center center no-repeat;
+	}
 </style>
 <template>
 	<div>
 		<v-header title="首页">
+			<router-link slot="left" to="/" class="indexBtn">首页</router-link>
 			<router-link slot="right" v-if="user.id" to="/signout">退出</router-link>
 			<router-link slot="right" v-else to="/login">未登录,立即登录</router-link>
 		</v-header>
@@ -31,7 +35,7 @@
 
   import { mapState } from 'vuex'
 
-	import logo from './logo.png'
+	import logo from './index_bg.jpg'
 
   export default {
 		data() {
