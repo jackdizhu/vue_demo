@@ -16,7 +16,7 @@ module.exports = {
         // publicPath: 'dist/',
         // php 服务器配置
         publicPath: '../dist/',
-        filename: 'js/[name].js',
+        filename: 'js/[name].js?[hash]',
         library: 'js/[name].js',
         libraryTarget: 'umd',
     },
@@ -70,8 +70,8 @@ module.exports = {
     // }
     plugins.push(
         new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
-            filename: _path + 'dist/html/index.html', //生成的html存放路径，相对于 path
-            template: _path + 'src/html/index.html', //html模板路径
+            filename: _path + 'dist/html/demo08.html', //生成的html存放路径，相对于 path
+            template: _path + 'src/html/demo08.html', //html模板路径
         })
     )
     // plugins: [new webpack.optimize.UglifyJsPlugin(), new webpack.optimize.ModuleConcatenationPlugin()],
