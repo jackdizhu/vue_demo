@@ -40,20 +40,21 @@
 
     export default {
         data() {
-			return {
-				btn: false, //true 已经提交过， false没有提交过
-				form: {
-					id: '',
-					name: ''
-				}
-			}
-		},
-		methods: {
+					return {
+						btn: false, //true 已经提交过， false没有提交过
+						form: {
+							id: '',
+							name: ''
+						}
+					}
+				},
+				methods: {
 						// mapAction 函数 把我们的 action 直接映射到store 里面的action中
             ...mapActions([USER_SIGNIN]),
 						submit() {
 								this.btn = true
 								if(!this.form.id || !this.form.name) return
+
 								this[USER_SIGNIN](this.form)
 								this.$router.replace({ path: '/' })
 						}

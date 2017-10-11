@@ -68,5 +68,11 @@ module.exports = {
     // externals: {
     //     vue: "window.Vue"
     // }
+    plugins.push(
+        new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
+            filename: _path + 'dist/html/index.html', //生成的html存放路径，相对于 path
+            template: _path + 'src/html/index.html', //html模板路径
+        })
+    )
     // plugins: [new webpack.optimize.UglifyJsPlugin(), new webpack.optimize.ModuleConcatenationPlugin()],
 }
