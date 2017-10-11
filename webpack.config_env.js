@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const path = require('path')
 
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 var _path = './public/';
 
 module.exports = {
@@ -12,10 +14,10 @@ module.exports = {
         path: path.resolve(__dirname, './'),
         // 正常配置
         // publicPath: 'dist/',
-        // php   服务器配置
+        // php 服务器配置
         publicPath: '../dist/',
-        filename: 'js/[name].[chunkhash:8].js',
-        library: 'js/[name].[chunkhash:8].js',
+        filename: 'js/[name].js?[chunkhash:8]',
+        library: 'js/[name].js',
         libraryTarget: 'umd',
     },
     module: {
@@ -56,5 +58,23 @@ module.exports = {
             }
         ],
     },
-    // plugins: [new webpack.optimize.UglifyJsPlugin(), new webpack.optimize.ModuleConcatenationPlugin()],
+    resolve: {
+        alias: {
+            vue: path.resolve(__dirname,_path + 'dist/js/vue/vue.js'), //webpack打包时，需要设置别名
+            store: '../../store' //设置别名
+        }
+    },
+    // 配置外部模块
+    // externals: {
+    //     vue: "window.Vue"
+    // }
+    plugins:[
+        new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
+            // filename: path.resolve(__dirname, _path + 'dist/html/demo08.html'), //生成的html存放路径，相对于 path
+            filename: '../html/demo08.html', //生成的html存放路径，相对于 path
+            template: path.resolve(__dirname, _path + 'src/html/demo08.html'), //html模板路径
+        }),
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.ModuleConcatenationPlugin()
+    ]
 }

@@ -16,7 +16,7 @@ module.exports = {
         // publicPath: 'dist/',
         // php 服务器配置
         publicPath: '../dist/',
-        filename: 'js/[name].js?[hash]',
+        filename: 'js/[name].js?[chunkhash:8]',
         library: 'js/[name].js',
         libraryTarget: 'umd',
     },
@@ -68,11 +68,13 @@ module.exports = {
     // externals: {
     //     vue: "window.Vue"
     // }
-    plugins.push(
+    plugins:[
         new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
-            filename: _path + 'dist/html/demo08.html', //生成的html存放路径，相对于 path
-            template: _path + 'src/html/demo08.html', //html模板路径
-        })
-    )
-    // plugins: [new webpack.optimize.UglifyJsPlugin(), new webpack.optimize.ModuleConcatenationPlugin()],
+            // filename: path.resolve(__dirname, _path + 'dist/html/demo08.html'), //生成的html存放路径，相对于 path
+            filename: '../html/demo08.html', //生成的html存放路径，相对于 path
+            template: path.resolve(__dirname, _path + 'src/html/demo08.html'), //html模板路径
+        }),
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.ModuleConcatenationPlugin()
+    ]
 }
