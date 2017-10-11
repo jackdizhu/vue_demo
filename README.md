@@ -15,7 +15,14 @@ VueRouter 没有渲染问题  需要调用 Vue.use(VueRouter); 方法
           vue: path.resolve(__dirname,_path + 'dist/js/vue/vue.js'), //webpack打包时，需要设置别名
           store: '../../store' //设置别名
       }
-  }
+
+webpack ^3 暂不支持 css 拆分插件
+
+大型单页应用注意问题
+
+  例如，第一次打开时，显示页面 A，页面 A 有一个setInterval事件，每隔一秒钟会向后台发送一个Ajax请求。这时我点击页面 A 上的跳转按钮，跳到页面 B，通过观察网络连接，发现页面 A 上的Ajax请求仍然在继续。
+
+  解决方案: 在离开该组件时，比如route的deactivate或者beforeDestory生命周期函数里手动clearInterval
 
 更改启动方式 开发环境 npm run dev  正式环境 npm run env
 
