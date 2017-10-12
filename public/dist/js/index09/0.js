@@ -242,7 +242,9 @@ var render = function() {
               _c("img", { attrs: { width: "50", src: _vm.logo, alt: "" } }),
               _vm._v(" "),
               _c("br"),
-              _vm._v("\n\t\t\t\tVue2 欢迎: " + _vm._s(_vm.user.name) + "\n\t\t")
+              _vm._v(
+                "\n\t\t\t\tVue2 欢迎: " + _vm._s(_vm.user.name) + " id: \n\t\t"
+              )
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "con" }, [_c("v-index_list")], 1)

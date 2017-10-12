@@ -6,9 +6,11 @@
         width: 200px;
         bottom: 0;
         background: #333300;
+       
         a{
             float: right;
-            padding: 3px;
+            color: #fff;
+            padding: 0 3px;
         }
 	}
 </style>

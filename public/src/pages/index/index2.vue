@@ -35,7 +35,7 @@
 		<div class="msg" v-if="user.id">
 			<div>
 					<img width="50" :src="logo" alt=""> <br>
-					Vue2 欢迎: {{user.name}}
+					Vue2 欢迎: {{user.name}} id: 
 			</div>
 
 			<div class="con">
@@ -46,7 +46,7 @@
 </template>
 <script>
 
-  import { mapState,mapActions,mapMutations } from 'vuex'
+  import { mapState,mapActions,mapMutations,mpaGetters } from 'vuex'
 
   import logo from './index_bg.jpg'
 
@@ -61,6 +61,9 @@
 			// ...mapState([{ user_me: state => state.user.user_me}])
 			// export default new Vuex.Store({
 									// state,
+			// ...mapGetters([
+            //      'show_userID'
+            //     ]),
 			...mapState(['user'])
 		}
   }

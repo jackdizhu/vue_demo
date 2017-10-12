@@ -57,17 +57,16 @@ const actions = {
 
 };
  // 获取状态信息
- const getter = {
-    showState(state) {
-        console.log(state)
+ const getters = {
+    show_userID(state) {
+        return state.user.id;
     }
- }
+ };
 
 export default new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production', //在非生产环境下，使用严格模式
     state,
     mutations,
     actions,
-    getter
-
+    getters
 })

@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/index09/" + chunkId + ".js?v=" + {"0":"1ce3c1ba","1":"c798443e","2":"b5e9319c"}[chunkId] + "";
+/******/ 		script.src = __webpack_require__.p + "js/index09/" + chunkId + ".js?v=" + {"0":"ffc9d055","1":"c798443e","2":"b5e9319c"}[chunkId] + "";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -13995,9 +13995,9 @@ var actions = {
     }
 };
 // 获取状态信息
-var getter = {
-    showState: function showState(state) {
-        console.log(state);
+var getters = {
+    show_userID: function show_userID(state) {
+        return state.user.id;
     }
 };
 
@@ -14006,8 +14006,7 @@ exports.default = new _vuex2.default.Store({
     state: state,
     mutations: mutations,
     actions: actions,
-    getter: getter
-
+    getters: getters
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
@@ -14302,7 +14301,7 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, "\n.list[data-v-ca592ef0] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 200px;\n  bottom: 0;\n  background: #333300;\n}\n.list a[data-v-ca592ef0] {\n  float: right;\n  padding: 3px;\n}\n", ""]);
+exports.push([module.i, "\n.list[data-v-ca592ef0] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 200px;\n  bottom: 0;\n  background: #333300;\n}\n.list a[data-v-ca592ef0] {\n  float: right;\n  color: #fff;\n  padding: 0 3px;\n}\n", ""]);
 
 // exports
 
@@ -14319,6 +14318,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
 //
 //
 //
