@@ -19,7 +19,8 @@ export default [
             {
                 path: '/', //首页
                 meta: { auth: false },
-                component: resolve => require(['../pages/index/index.vue'], resolve)
+                // component: resolve => require(['../pages/index/index.vue'], resolve) // 08
+                component: resolve => require(['../pages/index/index2.vue'], resolve) // 09
             },
             {
                 path: '*', //其他页面，强制跳转到登录页面

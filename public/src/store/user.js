@@ -12,7 +12,7 @@ export default {
         USER_SIGNIN(state, user) {
             sessionStorage.setItem('user', JSON.stringify(user))
             // es6 新增方法 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象
-            Object.assign(state, user)
+            Object.assign(state, user);
         },
         USER_SIGNOUT(state) {
             sessionStorage.removeItem('user')

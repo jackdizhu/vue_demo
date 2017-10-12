@@ -63,7 +63,7 @@ var gulp = require('gulp'),
   //定义监听文件修改任务
   gulp.task('watchBuild',(event) => {
       // livereload.listen();
-      gulp.watch([basePath + 'src/index.js'], ['buildjs']);
+      gulp.watch([basePath + 'src/*.js'], ['buildjs']);
 
   });
 
@@ -82,6 +82,7 @@ var gulp = require('gulp'),
 
   // 生成js文件
   gulp.task('buildjs',() => {
+    // src 与打包文件无关
     gulp.src(basePath + 'src/index.js')
       .pipe(gulp_webpack(webpack_config,webpack))
       .pipe(gulp.dest(basePath + 'dist/'))

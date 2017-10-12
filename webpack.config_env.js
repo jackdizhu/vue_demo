@@ -5,12 +5,13 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 // var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var _path = './public/';
+var demo_num = '09';
 
 module.exports = {
     entry:
     // [_path + 'src/index.js',_path + 'src/css/base.css'],
     {
-        index: _path + 'src/index.js',
+        index: _path + 'src/index'+demo_num+'.js',
     },
     // devtool: 'eval-source-map',
     output: {
@@ -19,9 +20,9 @@ module.exports = {
         // publicPath: 'dist/',
         // php 服务器配置
         publicPath: '../dist/',
-        filename: 'js/[name].js?v=[chunkhash:8]', // 每小块 单独的 hash 值
+        filename: 'js/index'+demo_num+'/[name].js?v=[chunkhash:8]', // 每小块 单独的 hash 值
         // filename: 'js/[name].js?' + new Date().getTime(), // 时间戳 版本号
-        library: 'js/[name].js',
+        library: 'js/index'+demo_num+'/[name].js',
         libraryTarget: 'umd',
     },
     module: {
@@ -62,9 +63,9 @@ module.exports = {
     // }
     plugins:[
         new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
-            // filename: path.resolve(__dirname, _path + 'dist/html/demo08.html'), //生成的html存放路径，相对于 path
-            filename: '../html/demo08.html', //生成的html存放路径，相对于 path
-            template: path.resolve(__dirname, _path + 'src/html/demo08.html'), //html模板路径
+            // filename: path.resolve(__dirname, _path + 'dist/html/demo'+demo_num+'.html'), //生成的html存放路径，相对于 path
+            filename: '../html/demo'+demo_num+'.html', //生成的html存放路径，相对于 path
+            template: path.resolve(__dirname, _path + 'src/html/demo'+demo_num+'.html'), //html模板路径
         }),
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.optimize.ModuleConcatenationPlugin()

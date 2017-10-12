@@ -40,48 +40,48 @@
 
     export default {
         data() {
-					return {
-						btn: false, //true 已经提交过， false没有提交过
-						form: {
-							id: '',
-							name: ''
-						}
-					}
-				},
-				methods: {
-						// mapAction 函数 把我们的 action 直接映射到store 里面的action中
-            ...mapActions([USER_SIGNIN]),
-						submit() {
-
-								if(this.btn || !this.form.id || !this.form.name) return
-
-								this.btn = true
-
-								var _this = this;
-								// 异步 发送 接收消息
-                this.axios({
-                    method:'post',
-                    url:'http://127.0.0.1:3000/api/user_signin',
-                    data: this.form,
-                    responseType:'json'
-                })
-                .then(function(res) {
-                    console.log(res);
-
-                    _this[USER_SIGNIN](_this.form)
-										_this.$router.replace({ path: '/' })
-
-                		_this.btn = false;
-                })
-                .catch(function (err) {
-                		if(err){
-		                    console.log(err + '获取数据失败');
-                		}
-
-                		_this.btn = false;
-                });
-
-						}
+			return {
+				btn: false, //true 已经提交过， false没有提交过
+				form: {
+					id: '',
+					name: ''
 				}
+			}
+		},
+		methods: {
+				// mapAction 函数 把我们的 user.js 中 action 的方法 直接映射进来
+				...mapActions([USER_SIGNIN]),
+				submit() {
+
+					if(this.btn || !this.form.id || !this.form.name) return
+
+					this.btn = true
+
+					var _this = this;
+					// 异步 发送 接收消息
+					this.axios({
+						method:'post',
+						url:'http://127.0.0.1:3000/api/user_signin',
+						data: this.form,
+						responseType:'json'
+					})
+					.then(function(res) {
+						console.log(res);
+
+						_this[USER_SIGNIN](_this.form)
+						_this.$router.replace({ path: '/' })
+
+						_this.btn = false;
+					})
+					.catch(function (err) {
+						if(err){
+							console.log(err + '获取数据失败');
+						}
+
+						_this.btn = false;
+					});
+
+				}
+		}
     }
 </script>

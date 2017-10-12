@@ -18,6 +18,20 @@ VueRouter 没有渲染问题  需要调用 Vue.use(VueRouter); 方法
 
 webpack ^3 暂不支持 css 拆分插件
 
+[Vue warn]: Invalid default value for prop "names": Props with type Object/Array must use a factory function to return the default value.
+Props 是 Object 或者 Array 需要用匿名函数返回
+
+vuex 组件之间 通过computed 共享状态
+通过 Vue.delete 删除数据
+
+vue 2.0
+新数组语法 
+value in arr 
+(value, index) in arr
+
+新对象语法 
+(value, key, index) in obj
+
 大型单页应用注意问题
 
   例如，第一次打开时，显示页面 A，页面 A 有一个setInterval事件，每隔一秒钟会向后台发送一个Ajax请求。这时我点击页面 A 上的跳转按钮，跳到页面 B，通过观察网络连接，发现页面 A 上的Ajax请求仍然在继续。

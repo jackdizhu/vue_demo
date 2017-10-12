@@ -37,14 +37,18 @@
 					<img width="50" :src="logo" alt=""> <br>
 					Vue2 欢迎: {{user.name}}
 			</div>
+
+			<div class="con">
+					<v-index_list></v-index_list>
+			</div>
 		</div>
 	</div>
 </template>
 <script>
 
-  import { mapState } from 'vuex'
+  import { mapState,mapActions,mapMutations } from 'vuex'
 
-	import logo from './index_bg.jpg'
+  import logo from './index_bg.jpg'
 
   export default {
 		data() {
@@ -52,7 +56,13 @@
 				logo
 			}
 		},
-    computed: mapState({ user: state => state.user }),
+		computed: {
+			// export default new Vuex.Store 中 使用 modules
+			// ...mapState([{ user_me: state => state.user.user_me}])
+			// export default new Vuex.Store({
+									// state,
+			...mapState(['user'])
+		}
   }
 
 </script>

@@ -1,2 +1,3 @@
 import header from './header.vue'
-export default { header }
+import index_list from './index_list.vue'
+export default { header,index_list }
