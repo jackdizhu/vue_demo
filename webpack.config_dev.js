@@ -13,7 +13,7 @@ module.exports = {
     {
         index: _path + 'src/index'+demo_num+'.js',
     },
-    devtool: 'eval-source-map',
+    // devtool: 'eval-source-map',
     output: {
         path: path.resolve(__dirname, './'),
         // 正常配置
