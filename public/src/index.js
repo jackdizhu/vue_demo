@@ -5,6 +5,9 @@ import routes from './router/routers.js'
 import store from './store/index.js'
 import components from './components' //加载公共组件
 
+import axios from 'axios'
+
+
 // import './css/base.css'
 // import './less/common.less'
 
@@ -16,6 +19,9 @@ Object.keys(components).forEach((key) => {
 
 // 使用路由
 Vue.use(VueRouter)
+
+// 将 axios 改写为 Vue 的原型属性
+Vue.prototype.axios = axios
 
 const router = new VueRouter({
     routes

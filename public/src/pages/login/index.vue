@@ -52,11 +52,35 @@
 						// mapAction 函数 把我们的 action 直接映射到store 里面的action中
             ...mapActions([USER_SIGNIN]),
 						submit() {
-								this.btn = true
-								if(!this.form.id || !this.form.name) return
 
-								this[USER_SIGNIN](this.form)
-								this.$router.replace({ path: '/' })
+								if(this.btn || !this.form.id || !this.form.name) return
+
+								this.btn = true
+
+								var _this = this;
+								// 异步 发送 接收消息
+                this.axios({
+                    method:'post',
+                    url:'http://127.0.0.1:3000/api/user_signin',
+                    data: this.form,
+                    responseType:'json'
+                })
+                .then(function(res) {
+                    console.log(res);
+
+                    _this[USER_SIGNIN](_this.form)
+										_this.$router.replace({ path: '/' })
+
+                		_this.btn = false;
+                })
+                .catch(function (err) {
+                		if(err){
+		                    console.log(err + '获取数据失败');
+                		}
+
+                		_this.btn = false;
+                });
+
 						}
 				}
     }

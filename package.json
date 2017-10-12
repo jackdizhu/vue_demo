@@ -22,5 +22,8 @@
     "vue-loader": "*",
     "vue-template-compiler": "*",
     "webpack": "^3.0.0"
+  },
+  "devDependencies": {
+    "axios": "^0.16.2"
   }
 }
