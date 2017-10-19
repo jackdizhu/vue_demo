@@ -22,7 +22,7 @@ const state = {
 const mutations = {
     // 方法名 建议大写
     USER_SIGNIN(state, user) {
-        sessionStorage.setItem('user', JSON.stringify(user))
+        sessionStorage.setItem('user', JSON.stringify(user)) //关闭浏览器 失效
         // es6 新增方法 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象
         // console.log(state.name,'state');
         // console.dir(user,'user');
@@ -58,9 +58,7 @@ const actions = {
 };
  // 获取状态信息
  const getters = {
-    show_userID(state) {
-        return state.user.id;
-    }
+    show_user_id: state => state.user.id,
  };
 
 export default new Vuex.Store({

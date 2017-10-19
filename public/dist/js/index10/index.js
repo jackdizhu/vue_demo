@@ -4,14 +4,14 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["js/index09/index.js"] = factory();
+		exports["js/index10/index.js"] = factory();
 	else
-		root["js/index09/index.js"] = factory();
+		root["js/index10/index.js"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
-/******/ 	var parentJsonpFunction = window["webpackJsonpjs_index09__name__js"];
-/******/ 	window["webpackJsonpjs_index09__name__js"] = function webpackJsonpCallback(chunkIds, moreModules, executeModules) {
+/******/ 	var parentJsonpFunction = window["webpackJsonpjs_index10__name__js"];
+/******/ 	window["webpackJsonpjs_index10__name__js"] = function webpackJsonpCallback(chunkIds, moreModules, executeModules) {
 /******/ 		// add "moreModules" to the modules object,
 /******/ 		// then flag all "chunkIds" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0, resolves = [], result;
@@ -39,7 +39,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		3: 0
+/******/ 		1: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/index09/" + chunkId + ".js?v=" + {"0":"5790a2c2","1":"717695cb","2":"ccd841f2"}[chunkId] + "";
+/******/ 		script.src = __webpack_require__.p + "js/index10/" + chunkId + ".js?v=" + {"0":"ee19cf08"}[chunkId] + "";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -152,7 +152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -732,7 +732,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(21)
+var listToStyles = __webpack_require__(20)
 
 /*
 type StyleObject = {
@@ -9906,7 +9906,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
   return Vue$3;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ }),
 /* 6 */
@@ -11194,76 +11194,19 @@ module.exports = Cancel;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.USER_SIGNOUT = exports.USER_SIGNIN = undefined;
-
 var _vue = __webpack_require__(5);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var USER_SIGNIN = exports.USER_SIGNIN = 'user_signin'; //登录成功 指向 方法
-var USER_SIGNOUT = exports.USER_SIGNOUT = 'user_signout'; //退出登录 指向 方法
-
-exports.default = {
-
-    state: JSON.parse(sessionStorage.getItem('user')) || {},
-    // 同步操作
-    mutations: {
-        // 方法名 建议大写
-        USER_SIGNIN: function USER_SIGNIN(state, user) {
-            sessionStorage.setItem('user', JSON.stringify(user));
-            // es6 新增方法 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象
-            Object.assign(state, user);
-        },
-        USER_SIGNOUT: function USER_SIGNOUT(state) {
-            sessionStorage.removeItem('user');
-            Object.keys(state).forEach(function (k) {
-                return _vue2.default.delete(state, k);
-            });
-        }
-    },
-    // 异步操作
-    actions: {
-        // {commit} 解构赋值 直接获取属性方法
-        user_signin: function user_signin(_ref, user) {
-            var commit = _ref.commit;
-
-            commit('USER_SIGNIN', user);
-        },
-
-        // {commit} 解构赋值 直接获取属性方法
-        user_signout: function user_signout(_ref2) {
-            var commit = _ref2.commit;
-
-            commit('USER_SIGNOUT');
-        }
-    }
-};
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _vue = __webpack_require__(5);
-
-var _vue2 = _interopRequireDefault(_vue);
-
-var _vueRouter = __webpack_require__(16);
+var _vueRouter = __webpack_require__(15);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _routers = __webpack_require__(17);
+var _routers = __webpack_require__(16);
 
 var _routers2 = _interopRequireDefault(_routers);
 
-var _index = __webpack_require__(24);
+var _index = __webpack_require__(23);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -11324,7 +11267,7 @@ router.beforeEach(function (_ref, from, next) {
 new _vue2.default({ store: _index2.default, router: router }).$mount('#app');
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11354,7 +11297,7 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13700,7 +13643,7 @@ exports.default = VueRouter;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13710,7 +13653,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _app = __webpack_require__(18);
+var _app = __webpack_require__(17);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -13723,42 +13666,30 @@ exports.default = [{
     path: '/',
     component: _app2.default,
     children: [{
-        path: '/login', //登录
-        meta: { auth: false },
-        component: function component(resolve) {
-            return __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(56)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
-        }
-    }, {
-        path: '/signout', //退出
-        component: function component(resolve) {
-            return __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(57)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
-        }
-    }, {
         path: '/', //首页
         meta: { auth: false },
-        // component: resolve => require(['../pages/index/index.vue'], resolve) // 08
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(58)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(56)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         } // 09
     }, {
         path: '*', //其他页面，强制跳转到登录页面
-        redirect: '/login'
+        redirect: '/'
     }]
 }];
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app_vue__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app_vue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_210b12b6_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_app_vue__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_210b12b6_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_app_vue__ = __webpack_require__(22);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(19)
+  __webpack_require__(18)
 }
 var normalizeComponent = __webpack_require__(4)
 /* script */
@@ -13802,13 +13733,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(20);
+var content = __webpack_require__(19);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -13828,7 +13759,7 @@ if(false) {
 }
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
@@ -13842,7 +13773,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13877,7 +13808,7 @@ module.exports = function listToStyles(parentId, list) {
 };
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13896,7 +13827,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {};
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13918,7 +13849,7 @@ if (false) {
 }
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13936,7 +13867,7 @@ var _vuex = __webpack_require__(7);
 
 var _vuex2 = _interopRequireDefault(_vuex);
 
-var _user = __webpack_require__(13);
+var _user = __webpack_require__(24);
 
 var _user2 = _interopRequireDefault(_user);
 
@@ -14014,6 +13945,63 @@ exports.default = new _vuex2.default.Store({
     getters: getters
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.USER_SIGNOUT = exports.USER_SIGNIN = undefined;
+
+var _vue = __webpack_require__(5);
+
+var _vue2 = _interopRequireDefault(_vue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var USER_SIGNIN = exports.USER_SIGNIN = 'user_signin'; //登录成功 指向 方法
+var USER_SIGNOUT = exports.USER_SIGNOUT = 'user_signout'; //退出登录 指向 方法
+
+exports.default = {
+
+    state: JSON.parse(sessionStorage.getItem('user')) || {},
+    // 同步操作
+    mutations: {
+        // 方法名 建议大写
+        USER_SIGNIN: function USER_SIGNIN(state, user) {
+            sessionStorage.setItem('user', JSON.stringify(user));
+            // es6 新增方法 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象
+            Object.assign(state, user);
+        },
+        USER_SIGNOUT: function USER_SIGNOUT(state) {
+            sessionStorage.removeItem('user');
+            Object.keys(state).forEach(function (k) {
+                return _vue2.default.delete(state, k);
+            });
+        }
+    },
+    // 异步操作
+    actions: {
+        // {commit} 解构赋值 直接获取属性方法
+        user_signin: function user_signin(_ref, user) {
+            var commit = _ref.commit;
+
+            commit('USER_SIGNIN', user);
+        },
+
+        // {commit} 解构赋值 直接获取属性方法
+        user_signout: function user_signout(_ref2) {
+            var commit = _ref2.commit;
+
+            commit('USER_SIGNOUT');
+        }
+    }
+};
 
 /***/ }),
 /* 25 */

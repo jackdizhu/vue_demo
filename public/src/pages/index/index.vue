@@ -1,12 +1,12 @@
 <style lang="less" scoped>
 	.login-msg {
-		padding: 50px;
+		padding: 1rem .2rem;
 		text-align: center;
 	}
 	.msg {
-		padding: 50px;
+		padding: 1rem .2rem;
 		text-align: center;
-		font-size: 20px;
+		font-size: .6rem;
 		color: red;
 	}
 	.indexBtn{
@@ -16,7 +16,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 38px;
+		top: 1.4rem;
 		bottom: 0;
 	}
 </style>

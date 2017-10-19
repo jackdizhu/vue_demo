@@ -1,9 +1,15 @@
 <style lang="less" scoped>
 	.btn {
-		padding: 50px;
+		padding: 1rem .2rem;
 		text-align: center;
 		button {
-			padding: 5px 10px;
+			width: 8rem;
+			padding: 0 .2rem;
+			margin-top: .4rem;
+			line-height: 1.2rem;
+			border: 0;
+			background: #eee;
+			border-radius: .1rem;
 		}
 	}
 </style>

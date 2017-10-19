@@ -1,7 +1,10 @@
 <style lang="less" scoped>
+	a {
+		color: #333;
+	}
 	.header {
 		position: relative;
-		line-height: 38px;
+		line-height: 1.4rem;
 		color: #666;
 		text-align: center;
 		background: #eee;
@@ -10,15 +13,12 @@
 			top: 0;
 			bottom: 0;
 			z-index: 1;
-			a {
-				color: #333;
-			}
 		}
 		.left {
-			left: 10px;
+			left: .2rem;
 		}
 		.right {
-			right: 10px;
+			right: .2rem;
 		}
 	}
 </style>

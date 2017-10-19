@@ -10,7 +10,7 @@
         a{
             float: right;
             color: #fff;
-            padding: 0 3px;
+            padding: 0 .1rem;
         }
 	}
 </style>

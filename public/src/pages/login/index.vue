@@ -1,18 +1,24 @@
 <style lang="less" scoped>
 	.login {
-		padding: 50px;
+		padding: 1rem .2rem;
 		text-align: center;
 		.line {
-			padding: 5px;
+			padding: .1rem;
 			input {
-				padding: 0 10px;
-				line-height: 28px;
+				width: 8rem;
+				padding: 0 .2rem;
+				line-height: 1.2rem;
+				border: 1px solid #eee;
 			}
 		}
 		button {
-			padding: 0 20px;
-			margin-top: 20px;
-			line-height: 28px;
+			width: 8rem;
+			padding: 0 .2rem;
+			margin-top: .4rem;
+			line-height: 1.2rem;
+			border: 0;
+			background: #eee;
+			border-radius: .1rem;
 		}
 	}
 </style>
