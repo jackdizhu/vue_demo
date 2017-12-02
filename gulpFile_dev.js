@@ -20,9 +20,9 @@ var gulp = require('gulp'),
 
   gulp_webpack = require('gulp-webpack'),
   webpack= require('webpack'),
-  webpack_config = require('./webpack.config_dev.js'),
+  webpack_config = require('./webpack.config_dev.js');
 
-  devHtml = require('gulp-devHtml');
+  // devHtml = require('gulp-devHtml');
 
   var basePath = 'public/';
 

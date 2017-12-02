@@ -29,20 +29,9 @@
 			<router-link slot="right" v-if="user.id" to="/signout">退出</router-link>
 			<router-link slot="right" v-else to="/login">未登录,立即登录</router-link>
 		</v-header>
-		<div class="login-msg" v-if="!user.id">
-			<div>
-					index 首页
-			</div>
-		</div>
-		<div class="msg" v-if="user.id">
-			<div>
-					<img width="50" :src="logo" alt=""> <br>
-					Vue2 欢迎: {{user.name}} id: {{user.id}}
-			</div>
-
-			<div class="con">
-					<v-index_list></v-index_list>
-			</div>
+		<div class="con">
+			<v-index_list2></v-index_list2>
+			<v-index_list3></v-index_list3>
 		</div>
 	</div>
 </template>
@@ -67,7 +56,10 @@
             //      'show_user_id'
             //     ]),
 			...mapState(['user'])
-		}
+		},
+		methods: {
+            ...mapActions(['del_users_k2','del_users_k3'])
+        }
   }
 
 </script>

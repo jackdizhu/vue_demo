@@ -16,7 +16,26 @@ const state = {
                 name: '好友一号',
             }
         ],
-        
+        users2: [
+            {
+                id: 'name_01',
+                name: '杰克帝主',
+            },
+            {
+                id: 'name_01',
+                name: '好友一号',
+            }
+        ],
+        users3: [
+            {
+                id: 'name_01',
+                name: '杰克帝主',
+            },
+            {
+                id: 'name_01',
+                name: '好友一号',
+            }
+        ],
 }
     // 同步操作
 const mutations = {
@@ -39,6 +58,14 @@ const mutations = {
     DEL_USERS_K(state,k) {
         // 删除数据
         Vue.delete(state.users, k)
+    },
+    DEL_USERS_K2(state,k) {
+        // 删除数据
+        Vue.delete(state.users2, k)
+    },
+    DEL_USERS_K3(state,k) {
+        // 删除数据
+        Vue.delete(state.users3, k)
     }
 };
 // 异步操作
@@ -53,6 +80,12 @@ const actions = {
     },
     del_users_k({commit},k){
         commit('DEL_USERS_K', k)
+    },
+    del_users_k2({commit},k){
+        commit('DEL_USERS_K2', k)
+    },
+    del_users_k3({commit},k){
+        commit('DEL_USERS_K3', k)
     }
 
 };

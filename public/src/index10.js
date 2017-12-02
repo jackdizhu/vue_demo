@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 import routes from './router/routers2.js'
 import store from './store/index2.js' // 不引入 user.js 写在同一个文件
-import components from './components' //加载公共组件
+import components from './components/index.js' //加载公共组件
 
 import axios from 'axios'
 
